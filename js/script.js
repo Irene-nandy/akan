@@ -43,5 +43,5 @@ if (gender == "male" && result == 0) {
   } else {
     alert("null");
   }
-
+  
 }
