@@ -1,47 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AKAN NAMING</title>
-    <link rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
-    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
- 
+
 </head>
+
 <body>
     <div class="container-fluid">
         <img src="/images/akan logo.png" alt=" " width="50px">
-        <div class="row"> 
-        <div class="col-md-12">
-       <h1>WELCOME TO AKAN NAMING SYSTEM.</h1>
-       <h2>Get your Akan Name By Filling The Form Below!</h2>
-       <h3>Description</h3>
-       <div id="desk">
-       <p>
-        Akan names are derived from Ghanian culture. Get your Akan name by filling the form below!<br>Names are based on gender and the date you were born.<br>Frequently in Ghana, children are given their first name as a 'day name' 
-        which corresponds to the day in the week they were born.
-       </p> 
+        <div class="row">
+            <div class="col-md-12">
+                <h1>WELCOME TO AKAN NAMING SYSTEM.</h1>
+                <h2>Get your Akan Name By Filling The Form Below!</h2>
+                <h3>Description</h3>
+                <div id="desk">
+                    <p>
+                        Akan names are derived from Ghanian culture. Get your Akan name by filling the form
+                        below!<br>Names are based on gender and the date you were born.<br>Frequently in Ghana, children
+                        are given their first name as a 'day name'
+                        which corresponds to the day in the week they were born.
+                    </p>
+                </div>
+            </div>
+            <div class="form">
+                <form name="form" onsubmit="return dateakan()" method="post">
+                    <div class="col-md-3">
+                        <p>century:<input type="number" size=20 name="century" Id=CC> </p><br>
+                        <p>year:<input type="number" size=20 name="year" Id=YY> </p><br>
+                        <p>month:<input type="number" size=20 name="month" Id=MM> </p><br>
+                        <p>date of birth:<input type="number" size=20 name="date of birth" Id=DD> </p><br>
+                        <p>gender:<input type="text" size=20 name="gender" Id=Id5> </p><br>
+                        <p><input type="submit" value="send" name="Submit">
+                            <input type="reset" value="Reset" name="Reset">
+                        </p>
+                </form>
+            </div>
+        </div>
     </div>
     </div>
-    <div class="form">
-        <form name="form" onsubmit="return dateakan()" method="post">
-            <div class="col-md-3">
-            <p>century:<input type="number" size=20 name="century" Id=CC > </p><br>
-            <p>year:<input type="number" size=20 name="year" Id=YY> </p><br>
-            <p>month:<input type="number"size=20 name="month" Id=MM> </p><br>
-            <p>date of birth:<input type="number" size=20 name="date of birth" Id=DD> </p><br>
-            <p>gender:<input type="text" size=20 name="gender" Id=Id5> </p><br>
-            <p><input type="submit" value="send" name="Submit">
-                <input type="reset" value="Reset" name="Reset">
-              </p>
-        </form>
+    <footer class="page-footer ">
+        <div class="footer-copyright text-center py-3">Copyright © 2020:
+            <a href="">Irene Kasiva</a>
         </div>
-        </div>
-        </div>
-    </div>    
+    </footer>
     <script src="js/script.js"></script>
 </body>
+
 </html>
