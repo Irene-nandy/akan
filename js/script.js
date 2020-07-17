@@ -7,3 +7,7 @@ function day (cc,yy,mm,dd){
     var mm = (document.getElementById("MM").value);
     var dd = (document.getElementById("DD").value);
     var gender=(document.getElementById("Id5").value);
+
+var result=day(cc,yy,mm,dd).toFixed(); 
+var males = ["Kwasi", "kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+var females = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"]; 
