@@ -5,15 +5,8 @@ body{
     font-family: sans-serif;
 }
 .form{
-    float: left;
-    width: 50%;
-    height: 50vhpx;
-    margin: 5px 10px 5px 0;
-    padding: 10px;
-    position: relative;
-    display: flex;
-    font-weight: bold;
-    font-size: 15px;
+    font-weight: bolder;
+    font-size: 26px;
     color: black;
     
 }

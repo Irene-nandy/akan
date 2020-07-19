@@ -88,22 +88,22 @@ function checkGender(){
                     document.getElementById("result").innerHTML = "The day is on a Sunday." + "  " + "Your akan name is  akosua!";
                   break;
                   case 1 || -1:
-                    document.getElementById("result").innerHTML = "The day is on a Monday." + " " + "Your akan name is adwoa!";
+                    document.getElementById("result").innerHTML = "The day is on a Monday." + " " + "Your akan name is Adwoa!";
                   break;
                   case 2 || -2:
-                    document.getElementById("result").innerHTML = "The day is on a Tuesday." + " " + "Your akan name is abenaa!";
+                    document.getElementById("result").innerHTML = "The day is on a Tuesday." + " " + "Your akan name is Abenaa!";
                   break;
                   case 3 || -3:
-                    document.getElementById("result").innerHTML = "The day is on a Wednesday." + " " + "Your akan name is akua!";
+                    document.getElementById("result").innerHTML = "The day is on a Wednesday." + " " + "Your akan name is Akua!";
                   break;
                   case 4 || -4:
-                    document.getElementById("result").innerHTML = "The day is on a Thursday." + " " + "Your akan name is yaa!";
+                    document.getElementById("result").innerHTML = "The day is on a Thursday." + " " + "Your akan name is Yaa!";
                   break;
                   case 5 || -5:
-                    document.getElementById("result").innerHTML = "The day is on a Friday." + " " + "Your akan name is afua!";
+                    document.getElementById("result").innerHTML = "The day is on a Friday." + " " + "Your akan name is Afua!";
                   break;
                   case 6 || -6:
-                    document.getElementById("result").innerHTML = "The day is on a Saturday." + " " + "Your akan name is ama!";
+                    document.getElementById("result").innerHTML = "The day is on a Saturday." + " " + "Your akan name is Ama!";
                   break;
 
               }
