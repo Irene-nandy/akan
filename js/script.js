@@ -1,47 +1,114 @@
-function day (cc,yy,mm,dd){
-    return ((((cc/19)+1*cc-1)+((5*yy/4)) + ((26*(mm+1)/10)) + dd)%7)+1
- }
- function akandate() {
-    var cc = (document.getElementById("CC").value); 
-    var yy = (document.getElementById("YY").value);
-    var mm = (document.getElementById("MM").value);
-    var dd = (document.getElementById("DD").value);
-    var gender=(document.getElementById("Id5").value);
+var century, year, month, dayOfMonth, dayOfWeek, day;
 
-var result=day(cc,yy,mm,dd).toFixed(); 
-var males = ["Kwasi", "kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
-var females = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"]; 
+function getInput(){
+  century = parseInt(document.getElementById("century").value);
+  year = parseInt(document.getElementById("year").value);
+  month = parseInt(document.getElementById("month").value);
+  dayOfMonth = parseInt(document.getElementById("monthday").value);
 
-if (gender == "male" && result == 0) {
-    alert(males[0]);
-  } else if (gender == "male" && result == 1) {
-    alert(males[1]);
-  } else if (gender == "male" && result == 2) {
-    alert(males[2]);
-  } else if (gender == "male" && result == 3) {
-    alert(males[3]);
-  } else if (gender == "male" && result == 4) {
-    alert(males[4]);
-  } else if (gender == "male" && result == 5) {
-    alert(males[5]);
-  } else if (gender == "male" && result == 6) {
-    alert(males[6]);
-  } else if (gender == "female" && result == 0) {
-    alert(females[0]);
-  } else if (gender == "female" && result == 1) {
-    alert(females[1]);
-  } else if (gender == "female" && result == 2) {
-    alert(females[2]);
-  } else if (gender == "female" && result == 3) {
-    alert(females[3]);
-  } else if (gender == "female" && result == 4) {
-    alert(females[4]);
-  } else if (gender == "female" && result == 5) {
-    alert(females[5]);
-  } else if (gender == "female" && result == 6) {
-    alert(females[6]);
-  } else {
-    alert("null");
+
+  if(century == ""){
+    alert("Input the correct gender");
+    return false;
+  }else if (year == ""){
+    alert("Input the correct year");
+    return false;
+  }else if (month == ""){
+    alert("Input the correct month");
+    return false;
+  }else if(dayOfMonth == ""){
+    alert("input the correct date");
+    return false;
   }
-  
+}
+
+function calculateDay(){
+    getInput();
+    dayOfWeek = ((((century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + dayOfMonth) % 7) -1;
+    console.log(dayOfWeek); 
+    return (Math.floor(dayOfWeek));
+    if (dayOfWeek < 0) {
+      dayOfWeek = dayOfWeek * -1;
+    }
+    else if (dayOfWeek > 0) {
+      return dayOfWeek;
+    }
+}
+
+//main caller func
+ function checkDayOfWeek(){
+     day = calculateDay();
+      checkGender();
+      console.log("The function runs");
+}
+
+let daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let maleNames = ["Kwasi!", "Kwadwo!", "Kwabena!", "Kwaku!", "Yaw!", "Kofi!", "Kwame!"];
+
+
+function checkGender(){
+  var gen = document.getElementsByName("rads");
+  if(gen[0].checked == true){
+      var gender = "male";
+  }else if(gen[1].checked == true){
+      var gender = "female";
+  }else {
+    console.log("pass");
+  }
+    switch(gender){
+        case gender = "male":
+              switch(day){
+                case (0 || -0):
+                  document.getElementById("result").innerHTML = "The day is on a Sunday." + "  " + "Your akan name is " + maleNames[0];
+                break;
+                case (1 || -1):
+                  document.getElementById("result").innerHTML = "The day is on a Monday." + " " + "Your akan name is " + maleNames[1];
+                break;
+                case (2 || -2):
+                  document.getElementById("result").innerHTML = "The day is on a Tuesday." + " " + "Your akan name is " + maleNames[2];
+                break;
+                case (3 || -3):
+                  document.getElementById("result").innerHTML = "The day is on a Wednesday." + " " + "Your akan name is "+ maleNames[3];
+                break;
+                case (4 || -4):
+                  document.getElementById("result").innerHTML = "The day is on a Thursday." + " " + "Your akan name is " + maleNames[4];
+                break;
+                case (5 || -5):
+                  document.getElementById("result").innerHTML = "The day is on a Friday." + " " + "Your akan name is " + maleNames[5];
+                break;
+                case (6 || -6):
+                  document.getElementById("result").innerHTML = "The day is on a Saturday." + " " + "Your akan name is " + maleNames[6];
+                break;
+                default:
+              }
+        break;
+        case gender = "female":
+                switch(day){
+                  case 0 || -0:
+                    document.getElementById("result").innerHTML = "The day is on a Sunday." + "  " + "Your akan name is  akosua!";
+                  break;
+                  case 1 || -1:
+                    document.getElementById("result").innerHTML = "The day is on a Monday." + " " + "Your akan name is adwoa!";
+                  break;
+                  case 2 || -2:
+                    document.getElementById("result").innerHTML = "The day is on a Tuesday." + " " + "Your akan name is abenaa!";
+                  break;
+                  case 3 || -3:
+                    document.getElementById("result").innerHTML = "The day is on a Wednesday." + " " + "Your akan name is akua!";
+                  break;
+                  case 4 || -4:
+                    document.getElementById("result").innerHTML = "The day is on a Thursday." + " " + "Your akan name is yaa!";
+                  break;
+                  case 5 || -5:
+                    document.getElementById("result").innerHTML = "The day is on a Friday." + " " + "Your akan name is afua!";
+                  break;
+                  case 6 || -6:
+                    document.getElementById("result").innerHTML = "The day is on a Saturday." + " " + "Your akan name is ama!";
+                  break;
+
+              }
+        break
+        default:
+        console.log("pass");
+    }
 }
