@@ -109,8 +109,9 @@ function checkGender(){
                   break;
 
               }
-        break
-        default:
-        console.log("pass");
+              break
+              default: {
+                alert("Input the all data Please!")
+              }
     }
 }
